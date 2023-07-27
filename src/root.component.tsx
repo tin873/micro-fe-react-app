@@ -3,6 +3,12 @@ import App from "./App";
 import './root.component.css'
 import { Link } from 'react-router-dom';
 export default function Root(props) {
+
+    const express = require('express');
+  const cors = require('cors');
+
+  const app = express();
+  app.use(cors());
   const [count, setCount] = useState(0);
   
   useEffect(() => {
